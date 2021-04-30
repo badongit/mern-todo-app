@@ -41,8 +41,7 @@ function LoginForm(props) {
         onSubmit={onSubmit}
       >
         {(formikProps) => {
-          const { values, errors, touched, isSubmitting } = formikProps;
-          console.log(values, errors, touched);
+          const { isSubmitting } = formikProps;
           
           return (
             <Form>

@@ -7,7 +7,6 @@ import './Auth.scss';
 import { Col, Container, Row } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./authSlice";
-import { unwrapResult } from "@reduxjs/toolkit";
 import authApi from "api/authApi";
 import { LOCAL_STORAGE_TOKEN_NAME } from "constants/global";
 import Loading from "components/Loading";
@@ -16,7 +15,6 @@ function Auth() {
   const history = useHistory();
   const dispatch = useDispatch();
   const { authLoading, isAuthenticated } = useSelector(state => state.auth);
-  console.log(authLoading, isAuthenticated);
   
   const handleLoginSubmit = async (values, actions) => {
     try {
@@ -27,10 +25,8 @@ function Auth() {
       if(data.success) {
         localStorage.setItem(LOCAL_STORAGE_TOKEN_NAME, data.accessToken);
 
-        const userData = await dispatch(getUser());
-        const user = unwrapResult(userData);
+        await dispatch(getUser());
 
-        console.log(user);
         history.push('/posts');
       } else  {
         console.log(data.message);
@@ -61,9 +57,7 @@ function Auth() {
 
       if(data.success) {
         localStorage.setItem(LOCAL_STORAGE_TOKEN_NAME, data.accessToken);
-        const userData = await dispatch(getUser());
-        const user = unwrapResult(userData);
-        console.log(user);
+        await dispatch(getUser());
         history.push('/posts');
       } else {
         console.log(data.message);
