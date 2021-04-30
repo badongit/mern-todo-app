@@ -1,0 +1,19 @@
+.detail {
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    width: 400px;
+    height: 100vh;
+    padding: 15px;
+
+    position: relative;
+
+    h2 {
+        padding: 15px;
+        text-align: center;
+        color: rgba(148, 147, 147, 0.534);
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}

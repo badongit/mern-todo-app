@@ -1,0 +1,24 @@
+.detail-form {
+    &__header {
+        justify-content: space-between;
+    
+        &__time {
+            color: rgb(68, 161, 238);
+        }
+    
+    }
+
+    input {
+        border: none;
+    }
+
+    .form-control:focus {
+        border: none;
+        box-shadow: none;
+    }
+    background-color: transparent;
+
+    input {
+        font-weight: bold;
+    }
+}

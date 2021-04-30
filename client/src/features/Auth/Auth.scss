@@ -1,0 +1,35 @@
+.auth {
+
+    &__background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+    
+        }
+    }
+
+    h1 {
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+
+    @media(max-width: 768px) {
+        img {
+            display: none;
+        }
+    }
+}
+
+.form {
+    &__button {
+        text-align: center;
+    }
+
+    &__redirect {
+        text-align: center;
+    }
+}

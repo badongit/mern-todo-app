@@ -1,0 +1,18 @@
+.main {
+    flex: 1;
+    padding: 20px;
+    
+    h2 {
+        font-size: 24px;
+        font-weight: normal;
+
+        i {
+            color: gray;
+        }
+    }
+
+    .note {
+        text-align: center;
+        opacity: 0.6;
+    }
+}

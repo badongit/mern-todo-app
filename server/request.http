@@ -1,0 +1,66 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "badong2001",
+    "password": "4122001Dong@"
+}
+
+###
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "badong2001",
+    "password": "4122001Dong@"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5MWJkZTY2ZmIyNzIzNzAzNmI2MTIiLCJpYXQiOjE2MTg1NjYxNjF9.sbiJWdKd_1O2HuOq-UFXFT8tlvDutxonKJ16EP_D7n8
+Content-Type: application/json
+
+{
+    "title": "Vue",
+    "description": "reacttt",
+    "status": "Completed"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5MWJkZTY2ZmIyNzIzNzAzNmI2MTIiLCJpYXQiOjE2MTg1NjYxNjF9.sbiJWdKd_1O2HuOq-UFXFT8tlvDutxonKJ16EP_D7n8
+
+
+### 
+
+PUT http://localhost:5000/api/posts/60799421d5df291f98254a21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5MWJkZTY2ZmIyNzIzNzAzNmI2MTIiLCJpYXQiOjE2MTg1NjYxNjF9.sbiJWdKd_1O2HuOq-UFXFT8tlvDutxonKJ16EP_D7n8
+Content-Type: application/json
+
+{
+    "title": "React JS"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/60799421d5df291f98254a21
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc5MWJkZTY2ZmIyNzIzNzAzNmI2MTIiLCJpYXQiOjE2MTg1NzM3MTB9.llvfhStSgEdG1nGjl1Hi1_l2Ci7-fsAE2SdJyPbND-I
+
+
+### 
+
+GET http://localhost:5000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDdmZWQ0YmJkZWY4ZjA0YTBmYTBiNWYiLCJpYXQiOjE2MTkwOTE5MDl9.jtydFHw4icJRB0K4efEUA6OI1T9uC67BDe8s0ymduAM
