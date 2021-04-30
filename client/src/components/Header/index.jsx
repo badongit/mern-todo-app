@@ -26,7 +26,7 @@ function Header(props) {
                 <div className="avatar">
                     <img src={AvatarDefault} alt="avatar"/>
                 </div>
-                <a href="/posts"><p>{user.username}</p></a>
+                <a href='/'><p>{user.username}</p></a>
             </h2>
             <hr/>
             <div className="nav">

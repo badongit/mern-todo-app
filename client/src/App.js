@@ -4,6 +4,7 @@ import Auth from 'features/Auth';
 import Todo from 'features/Todo';
 import { useDispatch } from 'react-redux';
 import { getUser } from 'features/Auth/authSlice';
+import NotFound from 'components/NotFound';
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,8 @@ function App() {
             <Route path='/register' component={Auth} />
 
             <Route path='/posts' component={Todo} />
+
+            <Route component={NotFound} />
 
           </Switch>
         </Router>
